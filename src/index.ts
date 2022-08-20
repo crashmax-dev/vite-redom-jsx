@@ -1,2 +1,1 @@
-import * as RedomJSX from './pragma.js'
-export default RedomJSX
+export * from './pragma.js'
