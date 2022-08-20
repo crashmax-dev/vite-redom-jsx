@@ -6,8 +6,13 @@
   "main": "./dist/index.cjs.js",
   "module": "./dist/index.es.js",
   "exports": {
-    "import": "./dist/index.es.js",
-    "require": "./dist/index.cjs.js"
+    ".": {
+      "import": "./dist/index.es.js",
+      "require": "./dist/index.cjs.js"
+    },
+    "./types": {
+      "types": "./dist/types.d.ts"
+    }
   },
   "files": [
     "dist",

@@ -1,4 +1,4 @@
-declare namespace JSX {
+export declare namespace JSX {
   interface IntrinsicElements {
     [tag: string]: BaseProps
   }
