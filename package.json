@@ -12,6 +12,7 @@
     }
   },
   "files": [
+    "types.d.ts",
     "dist",
     "!dist/vite-env.d.ts"
   ],
