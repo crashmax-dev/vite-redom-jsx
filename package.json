@@ -2,16 +2,14 @@
   "name": "vite-redom-jsx",
   "version": "0.1.2",
   "type": "module",
-  "types": "./dist/index.d.ts",
+  "types": "./dist/shim.d.ts",
   "main": "./dist/index.cjs.js",
   "module": "./dist/index.es.js",
   "exports": {
     ".": {
       "import": "./dist/index.es.js",
-      "require": "./dist/index.cjs.js"
-    },
-    "./shim": {
-      "types": "./dist/shim.d.ts"
+      "require": "./dist/index.cjs.js",
+      "types": "./dist/index.d.ts"
     }
   },
   "files": [
