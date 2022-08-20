@@ -1,6 +1,8 @@
-declare global {
-  namespace JSX {
-    interface IntrinsicElements {
+export declare global {
+  export declare namespace JSX {
+    export interface Element { }
+    export interface HTMLElement { }
+    export interface IntrinsicElements {
       [tag: string]: BaseProps
     }
   }
