@@ -1,1 +1,1 @@
-import { el } from 'redom'
+export * from './pragma.js'
