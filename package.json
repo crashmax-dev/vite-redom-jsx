@@ -1,0 +1,18 @@
+{
+  "name": "vite-redom-jsx",
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "devDependencies": {
+    "@types/node": "^18.7.8",
+    "redom": "^3.29.0",
+    "typescript": "^4.7.4",
+    "vite": "^3.0.9"
+  },
+  "peerDependencies": {
+    "redom": ">=3.29.0"
+  }
+}
