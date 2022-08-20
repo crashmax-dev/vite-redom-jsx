@@ -1,6 +1,8 @@
+import type { RedomElement } from 'redom'
+
 export declare global {
   export declare namespace JSX {
-    export interface Element { }
+    export interface Element extends RedomElement { }
     export interface HTMLElement { }
     export interface IntrinsicElements {
       [tag: string]: BaseProps
