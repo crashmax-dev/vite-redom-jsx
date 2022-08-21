@@ -12,7 +12,7 @@ export declare global {
 
 interface BaseProps extends Partial<ElementProps> {
   [property: string]: any
-  style: Partial<CSSStyleDeclaration>
+  style?: Partial<CSSStyleDeclaration>
 }
 
 type ElementWithoutReadonlyProps<T = HTMLElement> = Pick<T, WritableKeys<T>>
