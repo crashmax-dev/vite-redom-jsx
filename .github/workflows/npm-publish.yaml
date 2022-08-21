@@ -29,8 +29,8 @@ jobs:
         uses: pnpm/action-setup@v2.2.2
         with:
           version: 7.x.x
-          # run_install: |
-          #   - args: [--frozen-lockfile]
+          run_install: |
+            - args: []
 
       - name: Build packages
         run: pnpm build
