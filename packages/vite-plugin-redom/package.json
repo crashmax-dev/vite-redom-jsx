@@ -12,8 +12,8 @@
       "types": "./dist/index.d.ts"
     },
     "./jsx": {
-      "import": "./dist/index.js",
-      "require": "./dist/index.cjs",
+      "import": "./dist/jsx.js",
+      "require": "./dist/jsx.cjs",
       "types": "./dist/jsx.d.ts"
     }
   },
