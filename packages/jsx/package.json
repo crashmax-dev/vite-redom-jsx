@@ -1,6 +1,6 @@
 {
   "name": "redom-jsx",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "type": "module",
   "types": "./dist/index.d.ts",
   "main": "./dist/index.cjs",
@@ -15,10 +15,9 @@
     "dist"
   ],
   "scripts": {
-    "dev": "tsup src/index.ts --format esm,cjs --dts --watch",
-    "build": "tsup src/index.ts --format esm,cjs --dts --minify"
+    "build": "tsup"
   },
-  "devDependencies": {
+  "dependencies": {
     "redom": "^3.29.0"
   },
   "peerDependencies": {
