@@ -15,7 +15,8 @@
     "dist"
   ],
   "scripts": {
-    "build": "tsup"
+    "build": "tsup",
+    "prepublishOnly": "pnpm build"
   },
   "dependencies": {
     "redom": "^3.29.0"
