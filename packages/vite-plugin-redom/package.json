@@ -1,6 +1,6 @@
 {
   "name": "vite-plugin-redom",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "type": "module",
   "types": "./dist/index.d.ts",
   "main": "./dist/index.cjs",
@@ -25,13 +25,13 @@
     "prepublishOnly": "pnpm build"
   },
   "dependencies": {
-    "redom-jsx": "workspace:^0.1.0"
+    "redom-jsx": "workspace:^0.5.0"
   },
   "devDependencies": {
     "vite": "^3.0.9"
   },
   "peerDependencies": {
     "redom": ">=3.29.0",
-    "redom-jsx": "workspace:^0.1.0"
+    "redom-jsx": "workspace:^0.5.0"
   }
 }
