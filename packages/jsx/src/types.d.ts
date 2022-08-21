@@ -1,17 +1,16 @@
 import type { RedomElement } from 'redom'
 
-export declare global {
-  export declare namespace JSX {
-    export type Element = RedomElement
-    export interface HTMLElement { }
-    export interface IntrinsicElements {
-      [tag: string]: BaseProps
-    }
+declare namespace JSX {
+  export type Element = RedomElement
+  export interface HTMLElement {}
+  export interface IntrinsicElements {
+    [tag: string]: BaseProps
   }
 }
 
-interface BaseProps extends Partial<TagProps> {
+interface BaseProps extends Partial<ElementProps> {
   [property: string]: any
+  style: Partial<CSSStyleDeclaration>
 }
 
 type ElementWithoutReadonlyProps<T = HTMLElement> = Pick<T, WritableKeys<T>>
@@ -20,17 +19,9 @@ type ElementProps = Omit<
   FunctionPropertyNames<ElementWithoutReadonlyProps>
 >
 
-interface TagProps extends ElementProps {
-  id: string | number
-  value: string | number
-  style: Partial<CSSStyleDeclaration>
-  type: string
-  for: string | number
-}
-
 type IfEquals<X, Y, A = X, B = never> = (<T>() => T extends X ? 1 : 2) extends <
   T
-  >() => T extends Y ? 1 : 2
+>() => T extends Y ? 1 : 2
   ? A
   : B
 

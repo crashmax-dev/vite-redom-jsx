@@ -1,4 +1,5 @@
 import { el } from 'redom'
+import './types.d.ts'
 
 type Children = (Node | string)[]
 type Props = Record<string, string>
