@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "build": "pnpm --filter='./packages/*' -r run build",
-    "format": "prettier --write --ignore-unknown packages"
+    "format": "prettier --write --ignore-unknown packages",
+    "prepublishOnly": "pnpm build"
   },
   "devDependencies": {
     "@crashmax/tsconfig": "^1.0.2",
