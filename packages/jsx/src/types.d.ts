@@ -1,10 +1,12 @@
 import type { RedomElement } from 'redom'
 
-declare namespace JSX {
-  export type Element = RedomElement
-  export interface HTMLElement {}
-  export interface IntrinsicElements {
-    [tag: string]: BaseProps
+export declare global {
+  export declare namespace JSX {
+    export type Element = RedomElement
+    export interface HTMLElement {}
+    export interface IntrinsicElements {
+      [tag: string]: BaseProps
+    }
   }
 }
 
@@ -21,7 +23,7 @@ type ElementProps = Omit<
 
 type IfEquals<X, Y, A = X, B = never> = (<T>() => T extends X ? 1 : 2) extends <
   T
->() => T extends Y ? 1 : 2
+  >() => T extends Y ? 1 : 2
   ? A
   : B
 

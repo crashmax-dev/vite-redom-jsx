@@ -1,6 +1,6 @@
 import type { PluginOption } from 'vite'
 
-export default function redom(): PluginOption {
+function redom(): PluginOption {
   return {
     name: 'vite-plugin-redom',
     config() {
@@ -14,3 +14,6 @@ export default function redom(): PluginOption {
     }
   }
 }
+
+export { redom }
+export default redom
