@@ -1,0 +1,35 @@
+{
+  "name": "vite-plugin-redom",
+  "version": "0.0.0",
+  "type": "module",
+  "types": "./dist/index.d.ts",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs",
+      "types": "./dist/index.d.ts"
+    },
+    "./jsx": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs",
+      "types": "./dist/jsx.d.ts"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup"
+  },
+  "dependencies": {
+    "redom-jsx": "workspace:^0.0.0"
+  },
+  "devDependencies": {
+    "vite": "^3.0.9"
+  },
+  "peerDependencies": {
+    "redom-jsx": "workspace:^0.0.0"
+  }
+}

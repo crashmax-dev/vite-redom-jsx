@@ -2,11 +2,11 @@ import type { PluginOption } from 'vite'
 
 export default function redom(): PluginOption {
   return {
-    name: 'redom-jsx',
+    name: 'vite-plugin-redom',
     config() {
       return {
         esbuild: {
-          jsxInject: `import { h, Fragment } from 'vite-redom-jsx'`,
+          jsxInject: `import { h, Fragment } from 'vite-plugin-redom/jsx'`,
           jsxFactory: 'h',
           jsxFragment: 'Fragment'
         }
