@@ -4,6 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "dev": "pnpm --filter='./packages/*' -r run dev",
     "build": "pnpm --filter='./packages/*' -r run build",
     "format": "prettier --write --ignore-unknown packages"
   },
