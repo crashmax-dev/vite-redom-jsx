@@ -1,19 +1,25 @@
 {
   "name": "vite-redom-jsx",
-  "private": true,
-  "version": "1.0.0",
+  "version": "1.1.0",
   "type": "module",
+  "types": "./dist/index.d.ts",
+  "main": "./dist/index.cjs",
   "scripts": {
     "dev": "tsup --watch",
     "build": "tsup",
     "prepublishOnly": "pnpm build"
   },
+  "dependencies": {
+    "@babel/core": "^7.18.10",
+    "babel-plugin-transform-redom-jsx": "^3.0.5"
+  },
   "devDependencies": {
     "@types/babel__core": "^7.1.19",
     "vite": "^3.0.9"
   },
-  "dependencies": {
-    "@babel/core": "^7.18.10",
-    "babel-plugin-transform-redom-jsx": "^3.0.5"
+  "peerDependencies": {
+    "vite": ">=2.9.0",
+    "redom": ">=3.29.0",
+    "babel-plugin-transform-redom-jsx": ">=3.0.5"
   }
 }

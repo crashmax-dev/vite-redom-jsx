@@ -6,6 +6,15 @@ const isJSX = new RegExp(/.(t|j)sx?/)
 export default function redomPlugin(): PluginOption {
   return {
     name: 'vite-redom-jsx',
+    config() {
+      return {
+        esbuild: {
+          jsx: 'preserve',
+          jsxInject: `import { el } from 'redom'`,
+          jsxFactory: 'el'
+        }
+      }
+    },
     transform(src, path) {
       let code = src
 
@@ -13,7 +22,7 @@ export default function redomPlugin(): PluginOption {
         const out = transformSync(src, {
           code: true,
           plugins: [
-            require.resolve('babel-plugin-transform-redom-jsx'),
+            require('babel-plugin-transform-redom-jsx'),
             [
               'transform-react-jsx',
               {
