@@ -1,5 +1,4 @@
-// @ts-ignore
-import transformRedomJsx from 'babel-plugin-transform-redom-jsx'
+import transform from 'babel-plugin-transform-redom-jsx'
 import { transformSync } from '@babel/core'
 import type { PluginOption } from 'vite'
 
@@ -24,7 +23,7 @@ export default function redomPlugin(): PluginOption {
         const out = transformSync(src, {
           code: true,
           plugins: [
-            transformRedomJsx,
+            transform,
             [
               'transform-react-jsx',
               {
