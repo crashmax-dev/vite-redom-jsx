@@ -1,9 +1,14 @@
 {
   "name": "vite-redom-jsx",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "type": "module",
   "types": "./dist/index.d.ts",
   "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "exports": {
+    "import": "./dist/index.js",
+    "require": "./dist/index.cjs"
+  },
   "scripts": {
     "dev": "tsup --watch",
     "build": "tsup",
@@ -19,7 +24,6 @@
   },
   "peerDependencies": {
     "vite": ">=2.9.0",
-    "redom": ">=3.29.0",
-    "babel-plugin-transform-redom-jsx": ">=3.0.5"
+    "redom": ">=3.29.0"
   }
 }
