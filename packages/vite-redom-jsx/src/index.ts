@@ -1,5 +1,4 @@
 import transform from 'babel-plugin-transform-redom-jsx'
-import redom from 'vite-plugin-redom'
 import { transformSync } from '@babel/core'
 import type { PluginOption } from 'vite'
 
@@ -8,12 +7,19 @@ const regexpScripts = new RegExp(/.(t|j)sx?/)
 export default function redomJsxPlugin(): PluginOption {
   return {
     name: 'vite-redom-jsx',
-    enforce: 'pre',
     config() {
       return {
-        plugins: [
-          redom()
-        ]
+        resolve: {
+          dedupe: [
+            'redom'
+          ]
+        },
+        esbuild: {
+          jsx: 'preserve',
+          jsxInject: `import { el, Fragment } from 'redom-jsx'`,
+          jsxFactory: 'el',
+          jsxFragment: 'Fragment'
+        }
       }
     },
     transform(src, path) {
