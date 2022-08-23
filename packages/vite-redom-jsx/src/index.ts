@@ -21,18 +21,21 @@ export default function redomPlugin(): PluginOption {
       let code = src
 
       if (regexpScripts.test(path)) {
-        const out = transformSync(src, {
-          code: true,
-          plugins: [
-            transform,
-            [
-              'transform-react-jsx',
-              {
-                pragma: 'el'
-              }
+        const out = transformSync(
+          insertFragment(src),
+          {
+            code: true,
+            plugins: [
+              transform,
+              [
+                'transform-react-jsx',
+                {
+                  pragma: 'el'
+                }
+              ]
             ]
-          ]
-        })
+          }
+        )
 
         if (!out?.code) {
           throw new Error('Failed to transform jsx')
@@ -47,4 +50,10 @@ export default function redomPlugin(): PluginOption {
       }
     }
   }
+}
+
+function insertFragment(code: string): string {
+  return code
+    .replace(/<>/, '<Fragment>')
+    .replace(/<\/>/, '</Fragment>')
 }
