@@ -1,4 +1,5 @@
 import transform from 'babel-plugin-transform-redom-jsx'
+import redom from 'vite-plugin-redom'
 import { transformSync } from '@babel/core'
 import type { PluginOption } from 'vite'
 
@@ -9,12 +10,9 @@ export default function redomPlugin(): PluginOption {
     name: 'vite-redom-jsx',
     config() {
       return {
-        esbuild: {
-          jsx: 'preserve',
-          jsxInject: `import { el, Fragment } from 'redom-jsx'`,
-          jsxFactory: 'el',
-          jsxFragment: 'Fragment'
-        }
+        plugins: [
+          redom()
+        ]
       }
     },
     transform(src, path) {
