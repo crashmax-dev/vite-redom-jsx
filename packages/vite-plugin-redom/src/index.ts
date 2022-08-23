@@ -6,7 +6,6 @@ function redom(): PluginOption {
     config() {
       return {
         esbuild: {
-          jsx: 'preserve',
           jsxInject: `import { el, Fragment } from 'redom-jsx'`,
           jsxFactory: 'el',
           jsxFragment: 'Fragment'
