@@ -24,6 +24,6 @@
   },
   "peerDependencies": {
     "redom": ">=3.29.0",
-    "redom-jsx": "workspace:^1.0.0"
+    "redom-jsx": "workspace:^1.1.1"
   }
 }
