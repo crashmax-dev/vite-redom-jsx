@@ -5,9 +5,10 @@ import type { PluginOption } from 'vite'
 
 const regexpScripts = new RegExp(/.(t|j)sx?/)
 
-export default function redomPlugin(): PluginOption {
+export default function redomJsxPlugin(): PluginOption {
   return {
     name: 'vite-redom-jsx',
+    enforce: 'pre',
     config() {
       return {
         plugins: [
