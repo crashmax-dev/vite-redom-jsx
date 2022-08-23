@@ -37,7 +37,7 @@ importers:
       '@types/babel__core': ^7.1.19
       babel-plugin-transform-redom-jsx: ^3.0.5
       redom: '>=3.29.0'
-      redom-jsx: workspace:^1.1.0
+      redom-jsx: workspace:^1.1.1
       vite: ^3.0.9
     dependencies:
       '@babel/core': 7.18.10
