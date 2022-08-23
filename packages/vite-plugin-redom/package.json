@@ -1,6 +1,6 @@
 {
   "name": "vite-plugin-redom",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "type": "module",
   "types": "./dist/index.d.ts",
   "main": "./dist/index.cjs",
