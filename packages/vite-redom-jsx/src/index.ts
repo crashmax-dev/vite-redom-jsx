@@ -2,7 +2,7 @@ import transform from 'babel-plugin-transform-redom-jsx'
 import { transformSync } from '@babel/core'
 import type { PluginOption } from 'vite'
 
-const isJSX = new RegExp(/.(t|j)sx?/)
+const regexpScripts = new RegExp(/.(t|j)sx?/)
 
 export default function redomPlugin(): PluginOption {
   return {
@@ -11,15 +11,16 @@ export default function redomPlugin(): PluginOption {
       return {
         esbuild: {
           jsx: 'preserve',
-          jsxInject: `import { el } from 'redom'`,
-          jsxFactory: 'el'
+          jsxInject: `import { el, Fragment } from 'redom-jsx'`,
+          jsxFactory: 'el',
+          jsxFragment: 'Fragment'
         }
       }
     },
     transform(src, path) {
       let code = src
 
-      if (isJSX.test(path)) {
+      if (regexpScripts.test(path)) {
         const out = transformSync(src, {
           code: true,
           plugins: [
