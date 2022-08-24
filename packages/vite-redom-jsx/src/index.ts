@@ -1,8 +1,8 @@
 import transform from 'babel-plugin-transform-redom-jsx'
 import { transformSync } from '@babel/core'
+import { regexpScripts } from './constants.js'
+import { insertFragment } from './fragment.js'
 import type { PluginOption } from 'vite'
-
-const regexpScripts = new RegExp(/.(t|j)sx?/)
 
 export default function redomJsxPlugin(): PluginOption {
   return {
@@ -55,10 +55,4 @@ export default function redomJsxPlugin(): PluginOption {
       }
     }
   }
-}
-
-function insertFragment(code: string): string {
-  return code
-    .replace(/<>/, '<Fragment>')
-    .replace(/<\/>/, '</Fragment>')
 }
