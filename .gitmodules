@@ -1,0 +1,3 @@
+[submodule "packages/redom"]
+	path = packages/redom
+	url = https://github.com/yoloforks/redom
