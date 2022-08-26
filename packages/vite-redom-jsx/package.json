@@ -1,6 +1,6 @@
 {
   "name": "vite-redom-jsx",
-  "version": "1.5.2",
+  "version": "1.5.3",
   "type": "module",
   "types": "./dist/index.d.ts",
   "main": "./dist/index.cjs",
@@ -17,7 +17,7 @@
   "dependencies": {
     "@babel/core": "^7.18.10",
     "babel-plugin-transform-redom-jsx": "^3.0.5",
-    "redom-jsx": "workspace:^1.2.1"
+    "redom-jsx": "workspace:^1.2.2"
   },
   "devDependencies": {
     "@types/babel__core": "^7.1.19",

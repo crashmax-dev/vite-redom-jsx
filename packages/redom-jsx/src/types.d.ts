@@ -3,7 +3,7 @@ import type { RedomElement } from 'redom'
 export declare global {
   export declare namespace JSX {
     export type Element = RedomElement
-    export interface HTMLElement {}
+    export interface HTMLElement { }
     export interface IntrinsicElements {
       [tag: string]: BaseProps
     }

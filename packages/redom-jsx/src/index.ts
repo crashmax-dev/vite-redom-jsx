@@ -1,4 +1,4 @@
-import { el, mount, unmount, setAttr, setChildren } from 'redom'
+import { el, mount, unmount, setAttr, setStyle, setChildren } from 'redom'
 import type { RedomComponent } from 'redom'
 import './types.d.ts'
 
@@ -18,5 +18,6 @@ export {
   mount,
   unmount,
   setAttr,
+  setStyle,
   setChildren
 }
