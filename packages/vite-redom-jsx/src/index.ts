@@ -16,9 +16,9 @@ export default function redomJsxPlugin(): PluginOption {
         },
         esbuild: {
           jsx: 'preserve',
-          jsxInject: `import { el, Fragment } from 'redom-jsx'`,
-          jsxFactory: 'el',
-          jsxFragment: 'Fragment'
+          jsxInject: `import * as redom from 'redom-jsx'`,
+          jsxFactory: 'redom.el',
+          jsxFragment: 'redom.Fragment'
         }
       }
     },
