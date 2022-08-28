@@ -1,0 +1,4 @@
+[submodule "packages/redom-jsx"]
+	path = packages/redom-jsx
+	url = https://github.com/yoloforks/redom
+	branch = redom-jsx
