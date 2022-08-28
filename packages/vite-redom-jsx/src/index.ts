@@ -16,9 +16,9 @@ export default function redomJsxPlugin(): PluginOption {
         },
         esbuild: {
           jsx: 'preserve',
-          jsxInject: `import * as redom from 'redom-jsx'`,
-          jsxFactory: 'redom.el',
-          jsxFragment: 'redom.Fragment'
+          jsxInject: `import { h, Fragment } from 'redom-jsx'`,
+          jsxFactory: 'h',
+          jsxFragment: 'Fragment'
         }
       }
     },
@@ -35,7 +35,7 @@ export default function redomJsxPlugin(): PluginOption {
               [
                 'transform-react-jsx',
                 {
-                  pragma: 'el'
+                  pragma: 'h'
                 }
               ]
             ]
