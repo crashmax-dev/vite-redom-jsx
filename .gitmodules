@@ -2,3 +2,7 @@
 	path = packages/redom-jsx
 	url = https://github.com/yoloforks/redom
 	branch = redom-jsx
+[submodule "packages/babel-plugin-transform-redom-jsx"]
+	path = packages/babel-plugin-transform-redom-jsx
+	url = https://github.com/tomerigal/babel-plugin-transform-redom-jsx
+	branch = master

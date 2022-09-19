@@ -1,0 +1,17 @@
+{
+  "name": "redom-playground",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite serve"
+  },
+  "devDependencies": {
+    "vite": "^3.1.2",
+    "vite-redom-jsx": "workspace:*"
+  },
+  "dependencies": {
+    "redom-jsx": "workspace:*"
+  }
+}

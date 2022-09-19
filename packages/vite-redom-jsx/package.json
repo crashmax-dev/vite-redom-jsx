@@ -15,14 +15,14 @@
     "prepublishOnly": "pnpm build"
   },
   "dependencies": {
-    "@babel/core": "^7.18.10",
+    "@babel/core": "^7.19.1",
     "babel-plugin-transform-react-jsx": "^6.24.1",
     "babel-plugin-transform-redom-jsx": "^3.0.5",
     "redom-jsx": "workspace:*"
   },
   "devDependencies": {
     "@types/babel__core": "^7.1.19",
-    "vite": "^3.0.9"
+    "vite": "^3.1.2"
   },
   "peerDependencies": {
     "redom-jsx": ">=3.29.0",

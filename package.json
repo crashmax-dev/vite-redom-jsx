@@ -6,12 +6,14 @@
   "scripts": {
     "dev": "pnpm --filter='./packages/*' -r run dev",
     "build": "pnpm --filter='./packages/*' -r run build",
+    "dev:playground": "pnpm --filter='./playground' run dev",
+    "build:playground": "pnpm --filter='./playground' run build",
     "format": "prettier --write --ignore-unknown packages"
   },
   "devDependencies": {
     "@crashmax/tsconfig": "^1.0.2",
-    "@types/node": "^18.7.9",
-    "tsup": "^6.2.2",
-    "typescript": "^4.7.4"
+    "@types/node": "^18.7.18",
+    "tsup": "^6.2.3",
+    "typescript": "^4.8.3"
   }
 }
