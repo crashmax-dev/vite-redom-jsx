@@ -1,5 +1,6 @@
 import transform from 'babel-plugin-transform-redom-jsx'
 import { transformSync } from '@babel/core'
+import { regexpJSX } from './constants.js'
 import { insertFragment } from './fragment.js'
 import type { PluginOption } from 'vite'
 
@@ -24,7 +25,7 @@ export default function redomJsxPlugin(): PluginOption {
     transform(src, path) {
       let code = src
 
-      if (path.endsWith('.tsx') || path.endsWith('.jsx')) {
+      if (regexpJSX.test(path)) {
         const out = transformSync(
           insertFragment(src),
           {
