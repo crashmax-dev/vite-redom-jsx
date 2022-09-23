@@ -1,8 +1,8 @@
 import transform from 'babel-plugin-transform-redom-jsx'
+import type { PluginOption } from 'vite'
 import { transformSync } from '@babel/core'
 import { regexpJSX } from './constants.js'
 import { insertFragment } from './fragment.js'
-import type { PluginOption } from 'vite'
 
 export default function redomJsxPlugin(): PluginOption {
   return {
@@ -10,9 +10,7 @@ export default function redomJsxPlugin(): PluginOption {
     config() {
       return {
         resolve: {
-          dedupe: [
-            'redom'
-          ]
+          dedupe: ['redom']
         },
         esbuild: {
           jsx: 'preserve',
@@ -26,21 +24,18 @@ export default function redomJsxPlugin(): PluginOption {
       let code = src
 
       if (regexpJSX.test(path)) {
-        const out = transformSync(
-          insertFragment(src),
-          {
-            code: true,
-            plugins: [
-              transform,
-              [
-                'transform-react-jsx',
-                {
-                  pragma: 'h'
-                }
-              ]
+        const out = transformSync(insertFragment(src), {
+          code: true,
+          plugins: [
+            transform,
+            [
+              'transform-react-jsx',
+              {
+                pragma: 'h'
+              }
             ]
-          }
-        )
+          ]
+        })
 
         if (!out?.code) {
           throw new Error('Failed to transform jsx')
